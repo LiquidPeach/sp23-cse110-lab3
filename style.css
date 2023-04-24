@@ -1,8 +1,9 @@
 
 body {
-    background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
+
+
 
 main {
     display: flex;
@@ -64,6 +65,10 @@ label {
 
 form div {
     display: grid;
+}
+
+footer {
+    background-image: url("res/cat_background.jpg");
 }
 
 main, footer, .header {
