@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeting Minutes</title>
     <link rel="shortcut icon" type="image/png" href="res/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Code Pro', monospace;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Kitty Meeting Minutes</h1>
-        <h2>Previous Meeting Minutes</h2>
-        <nav>
+    <header class="header">
+        <h1 id="title">Kitty Meeting Minutes</h1>
+        <h2 class="heading">Previous Meeting Minutes</h2>
+        <nav id="nav-bar">
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Meeting 1</a></li>
                 <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Meeting 2</a></li>
@@ -19,29 +30,29 @@
         </nav>
     </header>
     
-    <main>
-        <section>
-            <h3>Date/Time of Meeting: </h3> 4/20/23
-            <h3>Members Present: </h3> 
-            <ul>
+    <main class="container">
+        <section class="section-segment">
+            <h2 class="heading">Date of Meeting</h3> <p id="date">4/20/23</p>
+            <h2 class="heading">Members Present</h3> 
+            <ul class="name-list">
                 <li>Mr. Whiskers</li>
                 <li>Boots</li>
                 <li>Mochi</li>
                 <li>Felix</li>
                 <li>Fluffy</li>
             </ul>
-            <h3>Members Absent: </h3> 
-            <ul>
+            <h2 class="heading">Members Absent</h3> 
+            <ul class="name-list">
                 <li>Pickles <i>(vet appointment)</i></li>
             </ul>
         </section>
         <hr>
-        <section>
-            <h2><span>Proceedings</span></h2>
-            <h3>Reports</h3>
+        <section class="section-segment">
+            <h2 class="heading">Proceedings</h2>
+            <h3 class="subheading">Reports:</h3>
             <ul>
                 <li>
-                    <span>Catnip Fundraiser</span>
+                    <span class="report-item">Catnip Fundraiser</span>
                     <br>
                     <p>
                         It was moved by <b>Mr. Whiskers</b> and seconded by <b>Fluffy</b>
@@ -51,22 +62,21 @@
                     </p>
                 </li>
             </ul>
-                
-            <h3>Old Buisiness</h3>
+            <h3 class="subheading">Old Buisiness:</h3>
             <ol>
                 <li>World Domination</li>
             </ol>
-            <h3>New Buisiness</h3>
+            <h3 class="subheading">New Buisiness:</h3>
             <ol>
                 <li>Solutions to the dog problem</li>
                 <li>Debate on why one brain cell is enough</li>
             </ol>
         </section>
         <hr>
-        <section>
+        <section class="section-segment">
             <div>
-                <h2>Agenda Item #1: Solutions to the Dog Problem</h2>
-                <h3>Discussion</h3>
+                <h2 class="heading">Agenda Item <span>#1</span>: Solutions to the Dog Problem</h2>
+                <h3 class="subheading">Discussion</h3>
                 <p>
                     These dogs are getting out of hand. They need to be dealt with <i>quietly</i>
                     so we can have our humans' full attention and not have out cat naps interupted
@@ -77,28 +87,27 @@
                 <img src="res/graph.png" alt="picture of graph">
             </div>
             <div>
-                <h2>Agenda Item #2: Debate as to Why One Brain Cell Is Enough</h2>
-                <h3>Discussion</h3>
-                <p>
-                    Cats have shared one brain cell for centuries. There is no need to invest in more
-                    brain cells since we have gotten by with only one just fine. 
+                <h2 class="heading">Agenda Item <span>#2</span>: Debate as to Why One Brain Cell Is Enough</h2>
+                <h3 class="subheading">Discussion</h3>
+                <p>Cats have shared one brain cell for centuries. There is no need to invest in more
+                brain cells since we have gotten by with only one just fine.
                 </p>
             </div>
             <div>
-                <h2>Additional Comments/Concerns</h2>
+                <h2 class="heading">Additional Comments/Concerns</h2>
                 <p>
                     <b>Boots</b> ask if there is a way to fill our food bowls ourselves without human assistance.
                     This may be a topic for a future meeting.
                 </p>
                     <details>
                         <summary>His Argument</summary>
-                        Meow meow meowmeow meow. Meow, meow meow meow meow.
+                        "Meow meow meowmeow meow. Meow, meow meow meow meow."
                     </details>
             </div>
         </section>
         <hr>
-        <section>
-            <h2>Audio and Video of Today's Meeting</h2>
+        <section class="section-segment">
+            <h2 class="heading">Audio and Video of Today's Meeting</h2>
             <div>
                 <audio controls src="res/cats_audio.mp3"></audio>
             </div>
@@ -110,36 +119,32 @@
         </section>
 
     </main>
-    <hr>
+
     <footer>
-        <h2>Sign-Up:</h2>
-        <form>
-            <div>
+        <form class="form-container">
+            <h2 class="heading">Sign-Up:</h2>
+            <div id="enter-name">
                 <label>Enter your name: </label>
                 <input type="text">
             </div>
-            <div>
+            <div id="check-box">
                 <label>Are yor a cat? </label>
                 <input type="checkbox">
             </div>
-            <div>
+            <div id="date-survey">
                 <label>Today's date: </label>
                 <input type="date">
             </div>
-
-            <div>
+            <div id="option">
                 <fieldset>
                     <legend>Wet food or dry?</legend>
-                    <div>
                         <input type="radio" name="action">
                         <label>Wet</label>
                         <input type="radio" name="action">
                         <label>Dry</label>
-                    </div>
                 </fieldset>
             </div>
-
-            <div>
+            <div id="data-list">
                 <label for="brand">Choose a brand:</label>
                 <input list="brands" id="brand" name="brand">
                 <datalist id="brands">
@@ -150,8 +155,7 @@
                     <option value="Royal Canin">
                 </datalist>
             </div>
-
-            <div>
+            <div id="select">
                 <label for="selection">Choose an option:</label>
                 <select name="selections" id="selection">
                     <option value="">--Please choose an option--</option>
@@ -159,12 +163,11 @@
                     <option value="">Outside</option>
                 </select>
             </div>
-
-            <div>
+            <div id="text-area">
                 <label for="comments">Any comments, questions or concerns?</label>
                 <textarea name="comments" id="comments" cols="30" rows="1">Meow meow meow, meow.</textarea>
             </div>
-            <button type="button">Submit</button>
+            <button type="button" id="submit-button">Submit</button>
         </form>
     </footer>
 </body>

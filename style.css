@@ -1,0 +1,210 @@
+
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+main {
+    display: flex;
+    background-color: aliceblue;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+h4 {
+    text-align: center;
+    text-decoration: underline;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+}
+
+h2, h3 {
+    color: #d87093;
+}
+
+.header {
+    display: block;
+    background-color: aliceblue;
+}
+
+.form-container { /* 7x2 grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-areas:
+                    "heading  heading" 
+                    "name     checkbox"
+                    "date     date"
+                    "legend   legend"
+                    "datalist selection"
+                    "textarea textarea"
+                    "button   button";
+    justify-items: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+/* Grid areas */
+
+.form-container > .heading { grid-area: heading; }
+#enter-name { grid-area: name; }
+#check-box { grid-area: checkbox; }
+#date-survey { grid-area: date; }
+#option { grid-area: legend; }
+#data-list { grid-area: datalist; }
+#select { grid-area: selection; }
+#text-area { grid-area: textarea; }
+#submit-button { grid-area: button; }
+
+label {
+    text-align: center;
+}
+
+form div {
+    display: grid;
+}
+
+main, footer, .header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 20rem;
+    margin-left: 20rem;
+}
+
+footer, .header, .section-segment {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    border-width: 0;
+    border-style: solid;
+    border-color: rgb(110, 110, 110);
+    border-radius: 10px;
+}
+
+main.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+p, details {
+    font-size: 1.2rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    margin: 25px 25px;
+    line-height: 1.8lh;
+}
+
+h2 + p {
+    color: #3c24b5;
+}
+
+h2 ~ form {
+    color: #3c24b5;
+}
+
+ul, ol {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+li {
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+details {
+    background-color: #70D8B5;
+}
+
+details:hover {
+    background-color: #01a36d;
+    cursor: pointer;
+}
+
+hr {
+    border: 0;
+    height: 1.5px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    min-width: 2.6455cm;
+    max-width: 3.125in;
+    min-height: 100px;
+    max-height: 300px;
+}
+
+a[href^="https"] { /* links that begin with https */
+    color: #8170D8;
+}
+
+a[href^="https"]:active{ /* click on links for fun color */
+    background-color: #f49fbb;
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+#title {
+    text-align: center;
+}
+
+.heading span {
+    color: #8170D8;
+}
+
+.form-container .heading {
+    color: #8170D8;
+    position: relative;
+}
+
+section ul {
+    margin: auto;
+    justify-content: center;
+}
+
+#date, .name-list li {
+    display: block;
+    text-align: center;
+    position: static;
+    margin: 0;
+}
+
+.section-segment {
+    text-align: center;
+    border: 0 solid black;
+}
+
+.heading, header .heading {
+    text-align: center;
+    text-decoration: underline;
+    padding: 1.5rem;
+}
+
+.subheading {
+    display: block;
+    color: #8170D8;
+    text-align: left;
+    margin: 25px 25px;
+}
+
+.report-item {
+    font-size: 1.1em;
+    font-weight: 900;
+    color: #7093D8;
+}
+
+@media (max-width: 1250px) { /* if screen gets too small, make sure elements still look good*/
+    footer, .header, .container {
+        min-width: 400px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
